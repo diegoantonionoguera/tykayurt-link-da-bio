@@ -14,7 +14,8 @@ Esse arquivo contém HTML, CSS e JavaScript da página. Não existe framework, b
 
 ## Asset local
 
-- `logo-tykayurt.webp` — logo exibido no topo da página.
+- `logo-tykayurt.png` — logo exibido no topo da página.
+- `images/` — imagens locais dos sabores exibidas nos cards.
 
 ## Como executar
 

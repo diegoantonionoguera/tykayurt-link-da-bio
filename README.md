@@ -5,7 +5,8 @@ Página oficial de link na bio da TykaYurt, iogurte artesanal de Curitiba.
 ## Estrutura do projeto
 
 - `index.html` — aplicação completa (HTML + CSS + JavaScript)
-- `logo-tykayurt.webp` — logo usado no cabeçalho
+- `logo-tykayurt.png` — logo usado no cabeçalho
+- `images/` — imagens locais dos sabores exibidas nos cards
 - `AGENTS.md` — instruções do projeto para Codex/agentes de código
 - `package.json` — metadados e comandos para executar localmente
 
