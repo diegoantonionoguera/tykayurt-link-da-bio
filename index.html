@@ -17,6 +17,40 @@
     <meta property="og:type" content="website" />
     <title>TykaYurt | Links oficiais</title>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SFEVY660N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-0SFEVY660N");
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "8205101376167714");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,6 +87,7 @@
         <a
           class="bio-card card-order"
           id="whatsapp-card"
+          data-track="whatsapp"
           href="https://wa.me/554191731323"
           target="_blank"
           rel="noopener noreferrer"
@@ -117,6 +152,7 @@
 
         <a
           class="bio-card card-instagram"
+          data-track="instagram"
           href="https://www.instagram.com/tykayurt_oficial/"
           target="_blank"
           rel="noopener noreferrer"
@@ -168,6 +204,7 @@
 
         <a
           class="bio-card card-site"
+          data-track="site"
           href="https://tykayurt-web.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -209,6 +246,7 @@
 
         <a
           class="bio-card card-marketplace"
+          data-track="marketplace"
           href="https://www.facebook.com/marketplace/item/2467269040365486/?mibextid=dXMIcH"
           target="_blank"
           rel="noopener noreferrer"
@@ -262,5 +300,39 @@
 
       <footer class="footer">TykaYurt · Curitiba, PR</footer>
     </main>
+
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=8205101376167714&amp;ev=PageView&amp;noscript=1"
+        alt=""
+      />
+    </noscript>
+
+    <script>
+      document.querySelectorAll("[data-track]").forEach(function (card) {
+        card.addEventListener("click", function () {
+          var origem = card.dataset.track;
+          var destino = card.href;
+
+          if (typeof gtag === "function") {
+            gtag("event", "click_bio_card", {
+              card_origem: origem,
+              card_destino: destino,
+            });
+          }
+
+          if (typeof fbq === "function") {
+            fbq("trackCustom", "CliqueCardBio", { origem: origem });
+
+            if (origem === "whatsapp") {
+              fbq("track", "Lead");
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
