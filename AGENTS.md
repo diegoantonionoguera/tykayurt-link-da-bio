@@ -8,9 +8,11 @@ Este repositório contém a página oficial de link na bio da marca TykaYurt.
 
 O código da aplicação está em:
 
-- `index.html`
+- `index.html` — estrutura e conteúdo.
+- `styles.css` — sistema visual e responsividade.
+- `script.js` — configuração do WhatsApp.
 
-Esse arquivo contém HTML, CSS e JavaScript da página. Não existe framework, bundler ou etapa de build.
+Não existe framework, bundler ou etapa de build.
 
 ## Asset local
 
@@ -50,4 +52,4 @@ Também pode ser aberta diretamente pelo arquivo `index.html`.
 
 ## Observação para Codex
 
-Se a solicitação mencionar "site", "link na bio", "cards", "WhatsApp", "Instagram", "Marketplace", "logo" ou alterações visuais, o ponto de entrada correto é `index.html`.
+Se a solicitação mencionar estrutura ou conteúdo, o ponto de entrada é `index.html`. Para alterações visuais, use `styles.css`; para o WhatsApp, use `script.js`.

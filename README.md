@@ -4,7 +4,10 @@ Página oficial de link na bio da TykaYurt, iogurte artesanal de Curitiba.
 
 ## Estrutura do projeto
 
-- `index.html` — aplicação completa (HTML + CSS + JavaScript)
+- `index.html` — estrutura e conteúdo da página
+- `styles.css` — identidade visual, responsividade e estados de interação
+- `script.js` — configuração segura do pedido pelo WhatsApp
+- `tests/check-site.mjs` — verificações estáticas sem dependências
 - `logo-tykayurt.png` — logo usado no cabeçalho
 - `images/` — imagens locais dos sabores exibidas nos cards
 - `AGENTS.md` — instruções do projeto para Codex/agentes de código
@@ -15,6 +18,12 @@ Página oficial de link na bio da TykaYurt, iogurte artesanal de Curitiba.
 ```bash
 npm install
 npm run dev
+```
+
+Para executar as verificações automáticas:
+
+```bash
+npm test
 ```
 
 Depois abra `http://localhost:3000`.
@@ -39,10 +48,12 @@ Projeto estático, sem framework e sem etapa de build:
 
 ## Entrada principal
 
-Para qualquer alteração visual ou funcional, comece por:
+Para alterar a estrutura ou o conteúdo, comece por:
 
 ```text
 /index.html
 ```
+
+Estilos ficam em `/styles.css` e o link dinâmico do WhatsApp em `/script.js`.
 
 O projeto é mobile-first e foi criado para uso como link na bio do Instagram.

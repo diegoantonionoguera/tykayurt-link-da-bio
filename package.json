@@ -5,7 +5,8 @@
   "description": "Página oficial de link na bio da TykaYurt",
   "scripts": {
     "dev": "serve . -l 3000",
-    "start": "serve . -l 3000"
+    "start": "serve . -l 3000",
+    "test": "node tests/check-site.mjs"
   },
   "devDependencies": {
     "serve": "^14.2.4"

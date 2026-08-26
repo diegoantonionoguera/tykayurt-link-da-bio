@@ -2,11 +2,11 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#F8F6F3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6f3" />
     <meta
       name="description"
-      content="TykaYurt — iogurte artesanal em Curitiba. Peça pelo WhatsApp, conheça os sabores e acesse o site oficial."
+      content="TykaYurt: iogurte artesanal em Curitiba. Escolha seu sabor e peça pelo WhatsApp."
     />
     <meta property="og:title" content="TykaYurt | Links oficiais" />
     <meta
@@ -16,529 +16,116 @@
     <meta property="og:image" content="logo-tykayurt.png" />
     <meta property="og:type" content="website" />
     <title>TykaYurt | Links oficiais</title>
+
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;600;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        color-scheme: light;
-        --ink: #212325;
-        --ink-soft: #2a2c2e;
-        --cream: #f8f6f3;
-        --cream-deep: #eee9e3;
-        --paper: #fffdf9;
-        --magenta: #c21863;
-        --pink: #f585b6;
-        --plum: #810080;
-        --max-width: 460px;
-        --radius-card: 30px;
-        --radius-pill: 999px;
-        --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        background: var(--cream);
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        color: var(--ink);
-        font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-        background:
-          radial-gradient(
-            circle at 50% -8%,
-            color-mix(in srgb, var(--pink) 26%, transparent),
-            transparent 28%
-          ),
-          radial-gradient(
-            circle at 4% 34%,
-            color-mix(in srgb, var(--plum) 7%, transparent),
-            transparent 20%
-          ),
-          var(--cream);
-      }
-      a {
-        color: inherit;
-      }
-      img,
-      svg {
-        display: block;
-      }
-      .page {
-        width: min(100%, var(--max-width));
-        margin: 0 auto;
-        padding: 28px 14px 30px;
-      }
-      .profile {
-        padding: 8px 18px 30px;
-        text-align: center;
-      }
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 31px;
-        margin-bottom: 18px;
-        padding: 7px 12px;
-        border: 1px solid color-mix(in srgb, var(--ink) 11%, transparent);
-        border-radius: var(--radius-pill);
-        background: color-mix(in srgb, var(--paper) 84%, transparent);
-        color: color-mix(in srgb, var(--ink) 76%, transparent);
-        font-size: 0.64rem;
-        font-weight: 800;
-        line-height: 1;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        box-shadow: 0 7px 24px color-mix(in srgb, var(--ink) 6%, transparent);
-      }
-      .status-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--magenta);
-        box-shadow: 0 0 0 4px
-          color-mix(in srgb, var(--magenta) 12%, transparent);
-      }
-      .brand-logo {
-        width: min(100%, 240px);
-        margin: 0 auto 16px;
-        padding: 0;
-        display: block;
-        filter: drop-shadow(
-          0 12px 28px color-mix(in srgb, var(--plum) 12%, transparent)
-        );
-      }
-      .brand-logo img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        display: block;
-      }
-      .handle {
-        margin-top: 4px;
-        color: var(--magenta);
-        font-size: 0.76rem;
-        font-weight: 800;
-      }
-      .tagline {
-        max-width: 385px;
-        margin: 14px auto 0;
-        color: color-mix(in srgb, var(--ink) 70%, transparent);
-        font-size: 0.91rem;
-        line-height: 1.58;
-        font-weight: 500;
-      }
-      .card-stack {
-        display: grid;
-        gap: 14px;
-      }
-      .bio-card {
-        position: relative;
-        isolation: isolate;
-        min-height: 390px;
-        overflow: hidden;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-decoration: none;
-        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-        border-radius: var(--radius-card);
-        box-shadow:
-          0 16px 40px color-mix(in srgb, var(--ink) 9%, transparent),
-          inset 0 1px 0 color-mix(in srgb, var(--paper) 88%, transparent);
-        transform: scale(1);
-        transition:
-          transform 180ms var(--ease),
-          box-shadow 220ms var(--ease);
-        -webkit-tap-highlight-color: transparent;
-      }
-      .bio-card:active {
-        transform: scale(0.985);
-      }
-      .bio-card:focus-visible {
-        outline: 3px solid var(--magenta);
-        outline-offset: 4px;
-      }
-      @media (hover: hover) {
-        .bio-card:hover {
-          box-shadow:
-            0 22px 52px color-mix(in srgb, var(--ink) 13%, transparent),
-            inset 0 1px 0 var(--paper);
-        }
-      }
-      .card-whatsapp {
-        background:
-          radial-gradient(
-            circle at 88% 17%,
-            color-mix(in srgb, var(--pink) 32%, transparent),
-            transparent 29%
-          ),
-          linear-gradient(
-            145deg,
-            var(--paper),
-            color-mix(in srgb, var(--pink) 12%, var(--cream)) 72%
-          );
-      }
-      .card-flavors {
-        background:
-          radial-gradient(
-            circle at 10% 86%,
-            color-mix(in srgb, var(--plum) 13%, transparent),
-            transparent 30%
-          ),
-          linear-gradient(145deg, var(--paper), var(--cream-deep));
-      }
-      .card-site {
-        background:
-          radial-gradient(
-            circle at 88% 85%,
-            color-mix(in srgb, var(--plum) 16%, transparent),
-            transparent 30%
-          ),
-          linear-gradient(
-            145deg,
-            color-mix(in srgb, var(--pink) 18%, var(--paper)),
-            var(--paper) 68%
-          );
-      }
-      .card-marketplace {
-        background:
-          radial-gradient(
-            circle at 91% 12%,
-            color-mix(in srgb, var(--pink) 24%, transparent),
-            transparent 28%
-          ),
-          linear-gradient(150deg, var(--cream-deep), var(--paper) 66%);
-      }
-      .card-top {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 14px;
-      }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 32px;
-        max-width: calc(100% - 64px);
-        padding: 7px 12px;
-        border-radius: var(--radius-pill);
-        background: color-mix(in srgb, var(--paper) 90%, transparent);
-        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-        box-shadow: 0 6px 18px color-mix(in srgb, var(--ink) 5%, transparent);
-        font-size: 0.67rem;
-        line-height: 1;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-        white-space: nowrap;
-      }
-      .pill-dot {
-        width: 8px;
-        height: 8px;
-        flex: 0 0 8px;
-        border-radius: 50%;
-        background: var(--magenta);
-        box-shadow: 0 0 0 4px
-          color-mix(in srgb, var(--magenta) 11%, transparent);
-      }
-      .icon-badge {
-        width: 50px;
-        height: 50px;
-        flex: 0 0 50px;
-        display: grid;
-        place-items: center;
-        border-radius: 17px;
-        background: color-mix(in srgb, var(--paper) 92%, transparent);
-        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-        color: var(--magenta);
-        box-shadow: 0 8px 22px color-mix(in srgb, var(--ink) 7%, transparent);
-      }
-      .icon-badge svg {
-        width: 25px;
-        height: 25px;
-      }
-      .card-title {
-        position: relative;
-        z-index: 3;
-        max-width: 92%;
-        margin: 28px 0 0;
-        font-family: "Anton", "Arial Narrow", sans-serif;
-        font-size: clamp(2.42rem, 10.2vw, 3.2rem);
-        line-height: 0.88;
-        font-weight: 400;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-        text-wrap: balance;
-      }
-      .card-title span {
-        display: block;
-        color: var(--magenta);
-      }
-      .product-visual {
-        position: absolute;
-        z-index: 1;
-        pointer-events: none;
-        user-select: none;
-      }
-      .product-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        filter: drop-shadow(
-          0 18px 18px color-mix(in srgb, var(--ink) 18%, transparent)
-        );
-      }
-      .visual-single {
-        width: 188px;
-        height: 205px;
-        right: -12px;
-        top: 105px;
-        transform: rotate(3deg);
-        opacity: 0.98;
-      }
-      .visual-trio {
-        right: -11px;
-        top: 111px;
-        width: 230px;
-        height: 220px;
-      }
-      .visual-trio img {
-        position: absolute;
-        width: 125px;
-        height: 160px;
-        object-fit: contain;
-      }
-      .visual-trio .p1 {
-        left: -4px;
-        top: 42px;
-        transform: rotate(-9deg);
-        z-index: 1;
-      }
-      .visual-trio .p2 {
-        left: 61px;
-        top: 3px;
-        transform: rotate(2deg);
-        z-index: 3;
-      }
-      .visual-trio .p3 {
-        right: -9px;
-        top: 42px;
-        transform: rotate(9deg);
-        z-index: 2;
-      }
-      .visual-site {
-        width: 180px;
-        height: 196px;
-        right: -6px;
-        top: 117px;
-        transform: rotate(-3deg);
-      }
-      .visual-marketplace {
-        width: 184px;
-        height: 200px;
-        right: -10px;
-        top: 115px;
-        transform: rotate(4deg);
-      }
-      .image-fade {
-        position: absolute;
-        z-index: 2;
-        left: 0;
-        right: 0;
-        bottom: 68px;
-        height: 95px;
-        pointer-events: none;
-        background: linear-gradient(
-          to bottom,
-          transparent,
-          color-mix(in srgb, var(--paper) 78%, transparent)
-        );
-      }
-      .card-bottom {
-        position: relative;
-        z-index: 4;
-        display: grid;
-        grid-template-columns: auto minmax(118px, 1fr);
-        align-items: end;
-        gap: 14px;
-        margin-top: 182px;
-      }
-      .cta {
-        min-height: 45px;
-        padding: 12px 16px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: var(--radius-pill);
-        background: var(--paper);
-        color: var(--ink);
-        border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-        box-shadow:
-          0 6px 0 color-mix(in srgb, var(--ink) 10%, transparent),
-          0 10px 24px color-mix(in srgb, var(--ink) 6%, transparent);
-        font-size: 0.76rem;
-        line-height: 1.05;
-        font-weight: 800;
-        white-space: nowrap;
-        transform: translateY(0);
-        transition:
-          transform 180ms var(--ease),
-          box-shadow 180ms var(--ease);
-      }
-      @media (hover: hover) {
-        .bio-card:hover .cta {
-          transform: translateY(-3px);
-          box-shadow:
-            0 9px 0 color-mix(in srgb, var(--ink) 10%, transparent),
-            0 14px 28px color-mix(in srgb, var(--ink) 8%, transparent);
-        }
-      }
-      .card-description {
-        margin: 0;
-        max-width: 180px;
-        justify-self: end;
-        color: color-mix(in srgb, var(--ink) 68%, transparent);
-        font-size: 0.74rem;
-        line-height: 1.42;
-        font-weight: 650;
-        text-align: right;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-      }
-      .footer {
-        padding: 26px 12px 4px;
-        text-align: center;
-        color: color-mix(in srgb, var(--ink) 52%, transparent);
-        font-size: 0.7rem;
-        font-weight: 650;
-      }
-      .footer a {
-        color: var(--magenta);
-        font-weight: 800;
-        text-decoration: none;
-      }
-      @media (hover: hover) {
-        .footer a:hover {
-          text-decoration: underline;
-          text-underline-offset: 3px;
-        }
-      }
-      @media (max-width: 390px) {
-        .page {
-          padding-inline: 10px;
-        }
-        .profile {
-          padding-inline: 10px;
-        }
-        .bio-card {
-          min-height: 415px;
-          padding: 17px;
-        }
-        .card-title {
-          max-width: 100%;
-          font-size: clamp(2.2rem, 11vw, 2.7rem);
-        }
-        .visual-single,
-        .visual-site,
-        .visual-marketplace {
-          width: 165px;
-          right: -16px;
-        }
-        .visual-trio {
-          width: 210px;
-          right: -22px;
-        }
-        .card-bottom {
-          grid-template-columns: 1fr;
-          align-items: start;
-          gap: 10px;
-          margin-top: 190px;
-        }
-        .cta {
-          width: max-content;
-          max-width: 100%;
-        }
-        .card-description {
-          max-width: 100%;
-          justify-self: start;
-          text-align: left;
-        }
-      }
-      @media (min-width: 700px) {
-        .page {
-          padding-top: 44px;
-          padding-bottom: 44px;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-        *,
-        *::before,
-        *::after {
-          transition-duration: 0.001ms !important;
-          animation-duration: 0.001ms !important;
-          animation-iteration-count: 1 !important;
-        }
-        .bio-card:active,
-        .bio-card:hover,
-        .bio-card:hover .cta {
-          transform: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
+
   <body>
+    <a class="skip-link" href="#links">Ir para os links</a>
+
     <main class="page">
-      <header class="profile" aria-label="Perfil oficial TykaYurt">
-        <div class="status">
-          <span class="status-dot" aria-hidden="true"></span>Iogurte artesanal ·
-          Curitiba
-        </div>
-        <div class="brand-logo" aria-label="Logo TykaYurt">
-          <img
-            src="logo-tykayurt.png"
-            alt="Logo TykaYurt"
-            width="240"
-            height="240"
-          />
-        </div>
-        <div class="handle">@tykayurt_oficial</div>
+      <header class="profile" aria-labelledby="profile-handle">
+        <p class="status">Iogurte artesanal · Curitiba</p>
+        <img
+          class="brand-logo"
+          src="logo-tykayurt.png"
+          alt="TykaYurt, delicie-se sem culpa"
+          width="720"
+          height="720"
+          fetchpriority="high"
+        />
+        <p class="handle" id="profile-handle">@tykayurt_oficial</p>
         <p class="tagline">
-          Se for pra comer iogurte, que seja de verdade. Iogurte artesanal
-          fresco em Curitiba.
+          Se for pra comer iogurte, que seja de verdade. Iogurte artesanal fresco em Curitiba.
         </p>
       </header>
-      <section class="card-stack" aria-label="Links oficiais da TykaYurt">
+
+      <section class="card-stack" id="links" aria-label="Links oficiais da TykaYurt">
         <a
-          class="bio-card card-whatsapp"
+          class="bio-card card-order"
+          id="whatsapp-card"
+          href="https://wa.me/554191731323"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pedir TykaYurt pelo WhatsApp"
+        >
+          <div class="card-top">
+            <span class="pill">Peça direto</span>
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M8 3.5h8M7.3 6h9.4l-.8 13a1.5 1.5 0 0 1-1.5 1.4H9.6A1.5 1.5 0 0 1 8.1 19L7.3 6Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.1 10.2c2.4.9 5.4.9 7.8 0"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <h1 class="card-title">Morango, Amora<span>e Abacaxi</span></h1>
+
+          <div class="product-visual visual-trio" aria-hidden="true">
+            <img
+              class="product product-one"
+              src="images/morango-hero.webp"
+              alt=""
+              width="1080"
+              height="1350"
+              decoding="async"
+            />
+            <img
+              class="product product-two"
+              src="images/abacaxi-hero.webp"
+              alt=""
+              width="1080"
+              height="1350"
+              decoding="async"
+            />
+            <img
+              class="product product-three"
+              src="images/amora-hero.webp"
+              alt=""
+              width="1080"
+              height="1350"
+              decoding="async"
+            />
+          </div>
+
+          <span class="image-fade" aria-hidden="true"></span>
+          <div class="card-bottom">
+            <span class="cta cta-primary">Pedir no WhatsApp →</span>
+            <p class="card-description">Pote de 500 ml por R$ 20. Sempre com fruta de verdade.</p>
+          </div>
+        </a>
+
+        <a
+          class="bio-card card-instagram"
           href="https://www.instagram.com/tykayurt_oficial/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Abrir o Instagram oficial da TykaYurt"
-          ><div class="card-top">
-            <span class="pill"
-              ><span class="pill-dot" aria-hidden="true"></span>Siga a
-              gente</span
-            ><span class="icon-badge" aria-hidden="true"
-              ><svg viewBox="0 0 24 24" fill="none">
+        >
+          <div class="card-top">
+            <span class="pill">Siga a gente</span>
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
                 <rect
                   x="4"
                   y="4"
@@ -555,139 +142,82 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                 />
-                <circle cx="17.3" cy="6.8" r="1" fill="currentColor" /></svg
-            ></span>
+                <circle cx="17.3" cy="6.8" r="1" fill="currentColor" />
+              </svg>
+            </span>
           </div>
+
           <h2 class="card-title">Siga no<span>Instagram</span></h2>
           <div class="product-visual visual-single" aria-hidden="true">
             <img
               src="images/morango-hero.webp"
               alt=""
-              loading="eager"
+              width="1080"
+              height="1350"
+              loading="lazy"
               decoding="async"
-              fetchpriority="high"
             />
           </div>
+
           <span class="image-fade" aria-hidden="true"></span>
           <div class="card-bottom">
             <span class="cta">Abrir Instagram →</span>
-            <p class="card-description">
-              Acompanhe novidades, sabores e conteúdos da TykaYurt.
-            </p>
-          </div></a
-        ><a
-          class="bio-card card-flavors"
-          id="whatsapp-card"
-          href="https://wa.me/554191731323?text=Oi!%20Quero%20pedir%20um%20TykaYurt"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Pedir sabores da TykaYurt pelo WhatsApp"
-          ><div class="card-top">
-            <span class="pill"
-              ><span class="pill-dot" aria-hidden="true"></span>Sabores da
-              casa</span
-            ><span class="icon-badge" aria-hidden="true"
-              ><svg viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M8 3.5h8M7.3 6h9.4l-.8 13a1.5 1.5 0 0 1-1.5 1.4H9.6A1.5 1.5 0 0 1 8.1 19L7.3 6Z"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8.1 10.2c2.4.9 5.4.9 7.8 0"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                /></svg
-            ></span>
+            <p class="card-description">Novidades, sabores e bastidores da produção artesanal.</p>
           </div>
-          <h2 class="card-title">Morango, Amora<span>e Abacaxi</span></h2>
-          <div class="product-visual visual-trio" aria-hidden="true">
-            <img
-              class="p1"
-              src="images/morango-hero.webp"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            /><img
-              class="p2"
-              src="images/abacaxi-hero.webp"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            /><img
-              class="p3"
-              src="images/amora-hero.webp"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <span class="image-fade" aria-hidden="true"></span>
-          <div class="card-bottom">
-            <span class="cta">Pedir no WhatsApp →</span>
-            <p class="card-description">
-              Pote de 500 ml por R$ 20. Sempre com fruta de verdade.
-            </p>
-          </div></a
-        ><a
+        </a>
+
+        <a
           class="bio-card card-site"
           href="https://tykayurt-web.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Acessar o site oficial da TykaYurt"
-          ><div class="card-top">
-            <span class="pill"
-              ><span class="pill-dot" aria-hidden="true"></span>Conheça a
-              marca</span
-            ><span class="icon-badge" aria-hidden="true"
-              ><svg viewBox="0 0 24 24" fill="none">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="8.5"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                />
+        >
+          <div class="card-top">
+            <span class="pill">Conheça a marca</span>
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
                 <path
                   d="M3.8 12h16.4M12 3.5c2 2.3 3 5.1 3 8.5s-1 6.2-3 8.5c-2-2.3-3-5.1-3-8.5s1-6.2 3-8.5Z"
                   stroke="currentColor"
                   stroke-width="1.8"
                   stroke-linecap="round"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
           </div>
+
           <h2 class="card-title">Site completo<span>TykaYurt</span></h2>
           <div class="product-visual visual-site" aria-hidden="true">
             <img
               src="images/amora-hero.webp"
               alt=""
+              width="1080"
+              height="1350"
               loading="lazy"
               decoding="async"
             />
           </div>
+
           <span class="image-fade" aria-hidden="true"></span>
           <div class="card-bottom">
             <span class="cta">Acessar o site →</span>
-            <p class="card-description">
-              Diferenciais, sabores e como pedir, tudo em um só lugar.
-            </p>
-          </div></a
-        ><a
+            <p class="card-description">Diferenciais, sabores e como pedir, tudo em um só lugar.</p>
+          </div>
+        </a>
+
+        <a
           class="bio-card card-marketplace"
-          id="marketplace-card"
           href="https://www.facebook.com/marketplace/item/2467269040365486/?mibextid=dXMIcH"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Ver anúncios da TykaYurt no Marketplace"
-          ><div class="card-top">
-            <span class="pill"
-              ><span class="pill-dot" aria-hidden="true"></span>Outro jeito de
-              pedir</span
-            ><span class="icon-badge" aria-hidden="true"
-              ><svg viewBox="0 0 24 24" fill="none">
+        >
+          <div class="card-top">
+            <span class="pill">Outro jeito de pedir</span>
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
                 <path
                   d="M6.5 8h11l1 11.5H5.5L6.5 8Z"
                   stroke="currentColor"
@@ -705,37 +235,32 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                   stroke-linecap="round"
-                /></svg
-            ></span>
+                />
+              </svg>
+            </span>
           </div>
+
           <h2 class="card-title">TykaYurt no<span>Marketplace</span></h2>
           <div class="product-visual visual-marketplace" aria-hidden="true">
             <img
               src="images/abacaxi-hero.webp"
               alt=""
+              width="1080"
+              height="1350"
               loading="lazy"
               decoding="async"
             />
           </div>
+
           <span class="image-fade" aria-hidden="true"></span>
           <div class="card-bottom">
             <span class="cta">Ver anúncios →</span>
-            <p class="card-description">
-              Confira nossos iogurtes no Facebook Marketplace.
-            </p>
-          </div></a
-        >
+            <p class="card-description">Confira nossos iogurtes no Facebook Marketplace.</p>
+          </div>
+        </a>
       </section>
-      <footer class="footer">Curitiba, PR</footer>
+
+      <footer class="footer">TykaYurt · Curitiba, PR</footer>
     </main>
-    <script>
-      const WHATSAPP_NUMBER = "554191731323";
-      const WHATSAPP_MESSAGE =
-        "Oi! Quero pedir um TykaYurt de 500 ml por R$ 20. Quais sabores estão disponíveis hoje?";
-      const whatsappCard = document.getElementById("whatsapp-card");
-      if (whatsappCard) {
-        whatsappCard.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-      }
-    </script>
   </body>
 </html>
