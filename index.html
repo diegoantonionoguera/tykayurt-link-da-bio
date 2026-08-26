@@ -312,25 +312,28 @@
     </noscript>
 
     <script>
-      document.querySelectorAll("[data-track]").forEach(function (card) {
-        card.addEventListener("click", function () {
-          var origem = card.dataset.track;
-          var destino = card.href;
+      document.addEventListener("DOMContentLoaded", function () {
+        var cards = document.querySelectorAll("[data-track]");
+        cards.forEach(function (card) {
+          card.addEventListener("click", function () {
+            var destinoTrack = this.getAttribute("data-track");
+            var hrefDestino = this.getAttribute("href") || "";
 
-          if (typeof gtag === "function") {
-            gtag("event", "click_bio_card", {
-              card_origem: origem,
-              card_destino: destino,
-            });
-          }
-
-          if (typeof fbq === "function") {
-            fbq("trackCustom", "CliqueCardBio", { origem: origem });
-
-            if (origem === "whatsapp") {
-              fbq("track", "Lead");
+            if (typeof gtag === "function") {
+              gtag("event", "click_bio_card", {
+                card_origem: destinoTrack,
+                card_destino: hrefDestino,
+              });
             }
-          }
+
+            if (typeof fbq === "function") {
+              fbq("trackCustom", "CliqueCardBio", { origem: destinoTrack });
+
+              if (destinoTrack === "whatsapp") {
+                fbq("track", "Lead", { content_name: "Link Bio WhatsApp" });
+              }
+            }
+          });
         });
       });
     </script>
