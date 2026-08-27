@@ -55,6 +55,8 @@ const requiredContent = [
   "utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=link_bio",
   "Oi! Vim do link da bio, quero pedir um TykaYurt",
   "https://tykayurt-link-da-bio.vercel.app/",
+  'type="application/ld+json"',
+  '"@type": "Organization"',
   "TykaYurt — iogurte artesanal em Curitiba",
 ];
 
@@ -62,7 +64,7 @@ for (const value of requiredContent) {
   if (!combined.includes(value)) throw new Error(`Conteúdo obrigatório ausente: ${value}`);
 }
 
-if (html.indexOf('id="whatsapp-card"') > html.indexOf("instagram.com")) {
+if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"')) {
   throw new Error("O pedido pelo WhatsApp deve aparecer antes do Instagram.");
 }
 
