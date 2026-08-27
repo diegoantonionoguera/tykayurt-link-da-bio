@@ -137,8 +137,8 @@ svg {
 }
 
 .brand-isologo {
-  width: 104px;
-  height: 104px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px color-mix(in srgb, var(--color-plum) 12%, transparent));
 }
@@ -560,8 +560,8 @@ svg {
   }
 
   .brand-isologo {
-    width: 96px;
-    height: 96px;
+    width: 68px;
+    height: 68px;
   }
 
   .bio-card {
