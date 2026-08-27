@@ -6,7 +6,7 @@
   --color-cream: #f8f6f3;
   --color-cream-deep: #eee9e3;
   --color-paper: #fffdf9;
-  --color-magenta: #c21863;
+  --color-magenta: #d72772;
   --color-pink: #f585b6;
   --color-plum: #810080;
 
@@ -55,8 +55,8 @@ body {
       transparent 21%
     ),
     var(--page-bg);
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -138,6 +138,25 @@ svg {
   color: var(--text-muted);
   font-size: 0.91rem;
   line-height: 1.58;
+}
+
+.freshness-badge {
+  display: flex;
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: -14px auto 20px;
+  padding: 8px 13px;
+  border-radius: var(--control-radius);
+  color: var(--color-cream);
+  background: var(--color-ink);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .card-stack {
@@ -265,13 +284,12 @@ svg {
   z-index: 3;
   max-width: 94%;
   margin: 27px 0 0;
-  font-family: "Anton", "Arial Narrow", sans-serif;
+  font-family: "Lobster", cursive;
   font-size: clamp(2.35rem, 10vw, 3.1rem);
   font-weight: 400;
   line-height: 0.9;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   text-wrap: balance;
-  text-transform: uppercase;
 }
 
 .card-title span {
@@ -412,6 +430,68 @@ svg {
   -webkit-line-clamp: 2;
 }
 
+.coming-soon {
+  position: relative;
+  display: grid;
+  min-height: 150px;
+  overflow: hidden;
+  grid-template-columns: 82px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 16px;
+  color: var(--color-cream);
+  background:
+    radial-gradient(circle at 8% 20%, color-mix(in srgb, var(--color-pink) 28%, transparent), transparent 34%),
+    var(--color-ink);
+}
+
+.peach-mark {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 48% 52% 54% 46%;
+  background: var(--color-pink);
+  box-shadow: inset -12px -9px 0 color-mix(in srgb, var(--color-magenta) 32%, transparent);
+  transform: rotate(-8deg);
+}
+
+.peach-mark::before {
+  position: absolute;
+  top: -10px;
+  left: 38px;
+  width: 26px;
+  height: 14px;
+  border-radius: 100% 0 100% 0;
+  background: var(--color-plum);
+  content: "";
+  transform: rotate(-24deg);
+}
+
+.coming-soon-label {
+  margin: 0 0 4px;
+  color: var(--color-pink);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coming-soon h2 {
+  margin: 0;
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.coming-soon p:last-child {
+  margin: 8px 0 0;
+  color: color-mix(in srgb, var(--color-cream) 76%, transparent);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
 .footer {
   padding: 28px 12px 4px;
   color: color-mix(in srgb, var(--color-ink) 56%, transparent);
@@ -486,6 +566,22 @@ svg {
     max-width: 100%;
     justify-self: start;
     text-align: left;
+  }
+
+  .freshness-badge {
+    max-width: 100%;
+    margin-top: -10px;
+  }
+
+  .coming-soon {
+    grid-template-columns: 66px 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .peach-mark {
+    width: 62px;
+    height: 62px;
   }
 }
 

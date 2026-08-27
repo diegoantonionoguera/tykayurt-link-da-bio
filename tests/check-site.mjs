@@ -21,7 +21,15 @@ const [html, css, script] = await Promise.all([
 ]);
 
 const combined = `${html}\n${css}\n${script}`;
-const forbidden = ["Ameixa", "Pêssego", "250 ml", "R$ 12", "@runablehq", "runable.js"];
+const forbidden = [
+  "Ameixa",
+  "250 ml",
+  "R$ 12",
+  "@runablehq",
+  "runable.js",
+  "por isso dura pouco",
+  "dura poucos dias de propósito",
+];
 
 for (const value of forbidden) {
   if (combined.includes(value)) throw new Error(`Conteúdo antigo encontrado: ${value}`);
@@ -31,12 +39,17 @@ const requiredContent = [
   "Morango",
   "Amora",
   "Abacaxi",
+  "Pêssego",
+  "Novidade em breve",
+  "Produção fresca a cada 48h",
   "500 ml",
   "R$ 20",
   "554191731323",
   "tykayurt_oficial",
   "styles.css",
   "script.js",
+  "utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=link_bio",
+  "Oi! Vim do link da bio, quero pedir um TykaYurt",
 ];
 
 for (const value of requiredContent) {

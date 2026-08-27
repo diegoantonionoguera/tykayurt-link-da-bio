@@ -1,6 +1,5 @@
 const WHATSAPP_NUMBER = "554191731323";
-const WHATSAPP_MESSAGE =
-  "Oi! Quero pedir um TykaYurt de 500 ml por R$ 20. Quais sabores estão disponíveis hoje?";
+const WHATSAPP_MESSAGE = "Oi! Vim do link da bio, quero pedir um TykaYurt";
 
 const whatsappCard = document.querySelector("#whatsapp-card");
 
