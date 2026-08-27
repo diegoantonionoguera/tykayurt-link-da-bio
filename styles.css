@@ -130,10 +130,22 @@ svg {
   text-transform: uppercase;
 }
 
+.brand-identity {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.brand-isologo {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px color-mix(in srgb, var(--color-plum) 12%, transparent));
+}
+
 .brand-logo {
-  width: min(100%, 240px);
+  width: min(100%, 224px);
   height: auto;
-  margin-inline: auto;
   filter: drop-shadow(0 12px 28px color-mix(in srgb, var(--color-plum) 12%, transparent));
 }
 
@@ -544,7 +556,12 @@ svg {
   }
 
   .brand-logo {
-    width: min(100%, 226px);
+    width: min(100%, 210px);
+  }
+
+  .brand-isologo {
+    width: 96px;
+    height: 96px;
   }
 
   .bio-card {
