@@ -15,8 +15,19 @@
     />
     <meta property="og:image" content="logo-tykayurt.png" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="TykaYurt" />
+    <meta property="og:url" content="https://tykayurt-link-da-bio.vercel.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TykaYurt | Links oficiais" />
+    <meta
+      name="twitter:description"
+      content="Iogurte artesanal fresco em Curitiba. Escolha seu sabor e peça pelo WhatsApp."
+    />
     <title>TykaYurt | Links oficiais</title>
 
+    <link rel="canonical" href="https://tykayurt-link-da-bio.vercel.app/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SFEVY660N"></script>
     <script>
@@ -67,7 +78,8 @@
     <a class="skip-link" href="#links">Ir para os links</a>
 
     <main class="page">
-      <header class="profile" aria-labelledby="profile-handle">
+      <header class="profile" aria-labelledby="profile-title">
+        <h1 class="sr-only" id="profile-title">TykaYurt — iogurte artesanal em Curitiba</h1>
         <p class="status">Iogurte artesanal · Curitiba</p>
         <img
           class="brand-logo"
@@ -77,14 +89,17 @@
           height="720"
           fetchpriority="high"
         />
-        <p class="handle" id="profile-handle">@tykayurt_oficial</p>
+        <p class="handle" id="profile-handle" translate="no">@tykayurt_oficial</p>
         <p class="tagline">
           Se for pra comer iogurte, que seja de verdade. Iogurte artesanal fresco em Curitiba.
         </p>
       </header>
 
       <p class="freshness-badge">
-        <span aria-hidden="true">🕐</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
         Produção fresca a cada 48h <span aria-hidden="true">·</span> lote limitado de 18 potes/dia
       </p>
 
@@ -119,7 +134,7 @@
             </span>
           </div>
 
-          <h1 class="card-title">Morango, Amora<span>e Abacaxi</span></h1>
+          <h2 class="card-title">Morango, Amora<span>e Abacaxi</span></h2>
 
           <div class="product-visual visual-trio" aria-hidden="true">
             <img

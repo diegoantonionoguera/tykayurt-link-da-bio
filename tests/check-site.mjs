@@ -7,6 +7,10 @@ const requiredFiles = [
   "logo-tykayurt.png",
   "favicon-32.png",
   "apple-touch-icon.png",
+  "robots.txt",
+  "sitemap.xml",
+  "llms.txt",
+  "vercel.json",
   "images/morango-hero.webp",
   "images/amora-hero.webp",
   "images/abacaxi-hero.webp",
@@ -50,6 +54,8 @@ const requiredContent = [
   "script.js",
   "utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=link_bio",
   "Oi! Vim do link da bio, quero pedir um TykaYurt",
+  "https://tykayurt-link-da-bio.vercel.app/",
+  "TykaYurt — iogurte artesanal em Curitiba",
 ];
 
 for (const value of requiredContent) {
