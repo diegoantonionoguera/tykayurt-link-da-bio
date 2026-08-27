@@ -5,8 +5,6 @@ const requiredFiles = [
   "styles.css",
   "script.js",
   "logo-tykayurt.png",
-  "logo-tykayurt.svg",
-  "isologo-tykayurt.webp",
   "favicon-32.png",
   "apple-touch-icon.png",
   "robots.txt",
