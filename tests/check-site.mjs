@@ -87,4 +87,8 @@ if (renderedHtml.includes('data-track="site"')) {
   throw new Error("O card Site completo deve permanecer oculto durante a atualização.");
 }
 
+if (renderedHtml.includes('class="coming-soon"')) {
+  throw new Error("O card Novidade em breve deve permanecer oculto até o lançamento.");
+}
+
 console.log("Verificações do link da bio aprovadas.");
