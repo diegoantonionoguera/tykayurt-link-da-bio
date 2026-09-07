@@ -31,6 +31,7 @@ const forbidden = [
   "R$ 12",
   "@runablehq",
   "runable.js",
+  "2467269040365486",
   "por isso dura pouco",
   "dura poucos dias de propósito",
 ];
@@ -50,6 +51,7 @@ const requiredContent = [
   "R$ 20",
   "554191731323",
   "tykayurt_oficial",
+  "1840642857099632",
   "styles.css",
   "script.js",
   "utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=link_bio",
