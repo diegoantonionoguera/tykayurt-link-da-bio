@@ -63,6 +63,9 @@ const requiredContent = [
   "Oi! Quero participar do Compartilhou, Ganhou e pegar meu código de indicação",
   "https://tykayurt-web.vercel.app/regulamento",
   'data-track="indicacao"',
+  '@media (prefers-color-scheme: dark)',
+  'clip-path: inset(0 round var(--image-radius))',
+  'media="(prefers-color-scheme: dark)"',
 ];
 
 for (const value of requiredContent) {
