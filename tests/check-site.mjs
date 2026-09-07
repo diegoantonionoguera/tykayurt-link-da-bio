@@ -81,4 +81,8 @@ if (renderedHtml.includes('id="referral-card"') || renderedHtml.includes('data-t
   throw new Error("O programa de indicação deve permanecer oculto até o lançamento.");
 }
 
+if (renderedHtml.includes('data-track="site"')) {
+  throw new Error("O card Site completo deve permanecer oculto durante a atualização.");
+}
+
 console.log("Verificações do link da bio aprovadas.");
