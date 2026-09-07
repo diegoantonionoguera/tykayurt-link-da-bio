@@ -76,8 +76,9 @@ if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"
   throw new Error("O pedido pelo WhatsApp deve aparecer antes do Instagram.");
 }
 
-if (html.indexOf('data-track="indicacao"') > html.indexOf('data-track="whatsapp"')) {
-  throw new Error("O programa de indicação deve ser o primeiro cartão da página.");
+const renderedHtml = html.replace(/<!--[\s\S]*?-->/g, "");
+if (renderedHtml.includes('id="referral-card"') || renderedHtml.includes('data-track="indicacao"')) {
+  throw new Error("O programa de indicação deve permanecer oculto até o lançamento.");
 }
 
 console.log("Verificações do link da bio aprovadas.");
