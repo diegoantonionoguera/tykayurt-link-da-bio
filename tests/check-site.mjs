@@ -11,9 +11,9 @@ const requiredFiles = [
   "sitemap.xml",
   "llms.txt",
   "vercel.json",
-  "images/morango-hero.webp",
-  "images/amora-hero.webp",
-  "images/abacaxi-hero.webp",
+  "images/morango.svg",
+  "images/amora.svg",
+  "images/abacaxi.svg",
 ];
 
 await Promise.all(requiredFiles.map((file) => access(file)));
@@ -58,6 +58,11 @@ const requiredContent = [
   'type="application/ld+json"',
   '"@type": "Organization"',
   "TykaYurt — iogurte artesanal em Curitiba",
+  "Compartilhou,",
+  "A cada 2 amigas que você indicar e comprarem, você ganha 1 pote de 250ml grátis.",
+  "Oi! Quero participar do Compartilhou, Ganhou e pegar meu código de indicação",
+  "https://tykayurt-web.vercel.app/regulamento",
+  'data-track="indicacao"',
 ];
 
 for (const value of requiredContent) {
@@ -66,6 +71,10 @@ for (const value of requiredContent) {
 
 if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"')) {
   throw new Error("O pedido pelo WhatsApp deve aparecer antes do Instagram.");
+}
+
+if (html.indexOf('data-track="indicacao"') > html.indexOf('data-track="whatsapp"')) {
+  throw new Error("O programa de indicação deve ser o primeiro cartão da página.");
 }
 
 console.log("Verificações do link da bio aprovadas.");
