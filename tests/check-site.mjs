@@ -65,13 +65,23 @@ const requiredContent = [
   "Oi! Quero participar do Compartilhou, Ganhou e pegar meu código de indicação",
   "https://tykayurt-web.vercel.app/regulamento",
   'data-track="indicacao"',
-  '@media (prefers-color-scheme: dark)',
   'clip-path: inset(0 round var(--image-radius))',
-  'media="(prefers-color-scheme: dark)"',
+  '<meta name="theme-color" content="#f8f6f3" />',
 ];
 
 for (const value of requiredContent) {
   if (!combined.includes(value)) throw new Error(`Conteúdo obrigatório ausente: ${value}`);
+}
+
+const forbiddenThemeContent = [
+  '@media (prefers-color-scheme: dark)',
+  'color-scheme: light dark',
+  'media="(prefers-color-scheme: dark)"',
+  'content="#212325"',
+];
+
+for (const value of forbiddenThemeContent) {
+  if (combined.includes(value)) throw new Error(`Tema escuro não deve estar ativo no link da bio: ${value}`);
 }
 
 if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"')) {

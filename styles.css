@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Brand primitives */
   --color-ink: #212325;
@@ -595,42 +595,6 @@ svg {
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --page-bg: var(--color-ink);
-    --surface: #2c2e31;
-    --text: var(--color-cream);
-    --text-muted: color-mix(in srgb, var(--color-cream) 72%, transparent);
-    --border-soft: color-mix(in srgb, var(--color-cream) 14%, transparent);
-    --shadow-card: 0 18px 48px rgb(0 0 0 / 34%);
-  }
-
-  .status,
-  .pill,
-  .icon-badge {
-    box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
-  }
-
-  .freshness-badge {
-    border: 1px solid var(--border-soft);
-    background: var(--surface);
-  }
-
-  .card-marketplace {
-    background:
-      radial-gradient(
-        circle at 91% 12%,
-        color-mix(in srgb, var(--color-pink) 20%, transparent),
-        transparent 29%
-      ),
-      linear-gradient(150deg, color-mix(in srgb, var(--color-plum) 12%, var(--surface)), var(--surface) 66%);
-  }
-
-  .product-visual img {
-    filter: drop-shadow(0 18px 18px rgb(0 0 0 / 38%));
-  }
-}
 @media (hover: hover) {
   .bio-card:hover {
     box-shadow: 0 22px 54px color-mix(in srgb, var(--color-ink) 14%, transparent);
