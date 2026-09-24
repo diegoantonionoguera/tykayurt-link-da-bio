@@ -10,7 +10,7 @@ O código da aplicação está em:
 
 - `index.html` — estrutura e conteúdo.
 - `styles.css` — sistema visual e responsividade.
-- `script.js` — configuração do WhatsApp.
+- `script.js` — configuração do WhatsApp e rastreamento dos cliques.
 
 Não existe framework, bundler ou etapa de build.
 
@@ -36,7 +36,7 @@ Também pode ser aberta diretamente pelo arquivo `index.html`.
 
 - Preservar o layout mobile-first de link na bio.
 - Preservar a identidade visual TykaYurt.
-- Usar Anton para títulos e Manrope para textos.
+- Usar Lobster para títulos e Open Sans para textos.
 - Não adicionar frameworks sem necessidade.
 - Manter os cards grandes empilhados.
 - Manter responsividade para telas de celular.
@@ -53,3 +53,4 @@ Também pode ser aberta diretamente pelo arquivo `index.html`.
 ## Observação para Codex
 
 Se a solicitação mencionar estrutura ou conteúdo, o ponto de entrada é `index.html`. Para alterações visuais, use `styles.css`; para o WhatsApp, use `script.js`.
+

@@ -41,7 +41,6 @@ const requiredContent = [
   "Abacaxi",
   "Pêssego",
   "Novidade em breve",
-  "Produção fresca a cada 48h",
   "500 ml",
   "R$ 20",
   "554191731323",
@@ -61,3 +60,4 @@ if (html.indexOf('id="whatsapp-card"') > html.indexOf("instagram.com")) {
 }
 
 console.log("Verificações do link da bio aprovadas.");
+

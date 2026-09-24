@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f8f6f3" />
+    <meta name="theme-color" content="#fff6f2" />
     <meta
       name="description"
       content="TykaYurt: iogurte artesanal em Curitiba. Escolha seu sabor e peça pelo WhatsApp."
@@ -60,33 +60,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./intro/intro.css" />
   </head>
 
   <body>
+    <script src="./intro/intro.js"></script>
     <a class="skip-link" href="#links">Ir para os links</a>
 
     <main class="page">
       <header class="profile" aria-labelledby="profile-handle">
         <p class="status">Iogurte artesanal · Curitiba</p>
-        <img
-          class="brand-logo"
-          src="logo-tykayurt.png"
-          alt="TykaYurt, delicie-se sem culpa"
-          width="720"
-          height="720"
-          fetchpriority="high"
-        />
+        <p class="brand-wordmark">
+          <img src="images/isologo-tykayurt.webp" alt="" width="44" height="44" />TykaYurt
+        </p>
         <p class="handle" id="profile-handle">@tykayurt_oficial</p>
         <p class="tagline">
           Se for pra comer iogurte, que seja de verdade. Iogurte artesanal fresco em Curitiba.
         </p>
       </header>
-
-      <p class="freshness-badge">
-        <span aria-hidden="true">🕐</span>
-        Produção fresca a cada 48h <span aria-hidden="true">·</span> lote limitado de 18 potes/dia
-      </p>
 
       <section class="card-stack" id="links" aria-label="Links oficiais da TykaYurt">
         <a
@@ -176,13 +169,7 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                 />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="3.5"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                />
+                <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8" />
                 <circle cx="17.3" cy="6.8" r="1" fill="currentColor" />
               </svg>
             </span>
@@ -230,7 +217,7 @@
             </span>
           </div>
 
-          <h2 class="card-title">Site completo<span>TykaYurt</span></h2>
+          <h2 class="card-title">Site completo<span class="brand-name">TykaYurt</span></h2>
           <div class="product-visual visual-site" aria-hidden="true">
             <img
               src="images/amora-hero.webp"
@@ -283,7 +270,9 @@
             </span>
           </div>
 
-          <h2 class="card-title">TykaYurt no<span>Marketplace</span></h2>
+          <h2 class="card-title">
+            <span class="brand-name">TykaYurt</span> no<span>Marketplace</span>
+          </h2>
           <div class="product-visual visual-marketplace" aria-hidden="true">
             <img
               src="images/abacaxi-hero.webp"
@@ -324,32 +313,5 @@
         alt=""
       />
     </noscript>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var cards = document.querySelectorAll("[data-track]");
-        cards.forEach(function (card) {
-          card.addEventListener("click", function () {
-            var destinoTrack = this.getAttribute("data-track");
-            var hrefDestino = this.getAttribute("href") || "";
-
-            if (typeof gtag === "function") {
-              gtag("event", "click_bio_card", {
-                card_origem: destinoTrack,
-                card_destino: hrefDestino,
-              });
-            }
-
-            if (typeof fbq === "function") {
-              fbq("trackCustom", "CliqueCardBio", { origem: destinoTrack });
-
-              if (destinoTrack === "whatsapp") {
-                fbq("track", "Lead", { content_name: "Link Bio WhatsApp" });
-              }
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
