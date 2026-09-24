@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tykayurt-link-da-bio.vercel.app/sitemap.xml

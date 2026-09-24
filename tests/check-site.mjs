@@ -7,9 +7,17 @@ const requiredFiles = [
   "logo-tykayurt.png",
   "favicon-32.png",
   "apple-touch-icon.png",
-  "images/morango-hero.webp",
-  "images/amora-hero.webp",
-  "images/abacaxi-hero.webp",
+  "robots.txt",
+  "sitemap.xml",
+  "llms.txt",
+  "vercel.json",
+  "images/morango.svg",
+  "images/amora.svg",
+  "images/abacaxi.svg",
+  "intro/intro.js",
+  "intro/intro.css",
+  "intro/logo-reveal.mp4",
+  "intro/logo.webp",
 ];
 
 await Promise.all(requiredFiles.map((file) => access(file)));
@@ -27,6 +35,7 @@ const forbidden = [
   "R$ 12",
   "@runablehq",
   "runable.js",
+  "2467269040365486",
   "por isso dura pouco",
   "dura poucos dias de propósito",
 ];
@@ -45,18 +54,56 @@ const requiredContent = [
   "R$ 20",
   "554191731323",
   "tykayurt_oficial",
+  "1840642857099632",
   "styles.css",
   "script.js",
   "utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=link_bio",
   "Oi! Vim do link da bio, quero pedir um TykaYurt",
+  "https://tykayurt-link-da-bio.vercel.app/",
+  'type="application/ld+json"',
+  '"@type": "Organization"',
+  "TykaYurt — iogurte artesanal em Curitiba",
+  "Compartilhou,",
+  "A cada 2 amigas que você indicar e comprarem, você ganha 1 pote de 250ml grátis.",
+  "Oi! Quero participar do Compartilhou, Ganhou e pegar meu código de indicação",
+  "https://tykayurt-web.vercel.app/regulamento",
+  'data-track="indicacao"',
+  'clip-path: inset(0 round 16px)',
+  '<meta name="theme-color" content="#fff6f2" />',
 ];
 
 for (const value of requiredContent) {
   if (!combined.includes(value)) throw new Error(`Conteúdo obrigatório ausente: ${value}`);
 }
 
-if (html.indexOf('id="whatsapp-card"') > html.indexOf("instagram.com")) {
+const forbiddenThemeContent = [
+  '@media (prefers-color-scheme: dark)',
+  'color-scheme: light dark',
+  'media="(prefers-color-scheme: dark)"',
+  'content="#212325"',
+];
+
+for (const value of forbiddenThemeContent) {
+  if (combined.includes(value)) throw new Error(`Tema escuro não deve estar ativo no link da bio: ${value}`);
+}
+
+if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"')) {
   throw new Error("O pedido pelo WhatsApp deve aparecer antes do Instagram.");
+}
+
+const renderedHtml = html.replace(/<!--[\s\S]*?-->/g, "");
+if (renderedHtml.includes("freshness-badge")) throw new Error("O aviso de produção removido não deve reaparecer.");
+if (combined.includes("<<<<<<<") || combined.includes(">>>>>>>")) throw new Error("Conflito de merge não resolvido.");
+if (renderedHtml.includes('id="referral-card"') || renderedHtml.includes('data-track="indicacao"')) {
+  throw new Error("O programa de indicação deve permanecer oculto até o lançamento.");
+}
+
+if (renderedHtml.includes('data-track="site"')) {
+  throw new Error("O card Site completo deve permanecer oculto durante a atualização.");
+}
+
+if (renderedHtml.includes('class="coming-soon"')) {
+  throw new Error("O card Novidade em breve deve permanecer oculto até o lançamento.");
 }
 
 console.log("Verificações do link da bio aprovadas.");

@@ -1,0 +1,16 @@
+# TykaYurt — links oficiais
+
+> Página oficial de links da TykaYurt, marca de iogurte artesanal produzido em Curitiba.
+
+## Links
+
+- [Pedir pelo WhatsApp](https://wa.me/554191731323): pedidos de TykaYurt com mensagem pré-preenchida.
+- [Site institucional](https://tykayurt-web.vercel.app/): marca, sabores, diferenciais e informações de pedido.
+- [Instagram](https://www.instagram.com/tykayurt_oficial/): perfil oficial @tykayurt_oficial.
+
+## Produto
+
+- Iogurte artesanal de 500 ml.
+- Sabores disponíveis: Morango, Amora e Abacaxi.
+- Produção fresca a cada 48 horas, limitada a 18 potes por dia.
+- Atendimento em Curitiba.

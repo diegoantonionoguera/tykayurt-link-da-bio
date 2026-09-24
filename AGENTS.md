@@ -48,9 +48,10 @@ Também pode ser aberta diretamente pelo arquivo `index.html`.
 - Instagram: `https://www.instagram.com/tykayurt_oficial/`
 - WhatsApp: `https://wa.me/554191731323`
 - Site: `https://tykayurt-web.vercel.app/`
-- Marketplace: `https://www.facebook.com/marketplace/item/2467269040365486/?mibextid=dXMIcH`
+- Marketplace: `https://www.facebook.com/marketplace/item/1840642857099632/?mibextid=dXMIcH`
+
+Os cards de indicação, site completo e novidade permanecem ocultos, conforme decisões do GitHub preservadas na integração de 24/09/2026. As fotos dos cards usam os SVGs remotos. A abertura e a identidade visual local foram mantidas.
 
 ## Observação para Codex
 
 Se a solicitação mencionar estrutura ou conteúdo, o ponto de entrada é `index.html`. Para alterações visuais, use `styles.css`; para o WhatsApp, use `script.js`.
-
