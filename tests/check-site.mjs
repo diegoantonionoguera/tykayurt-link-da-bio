@@ -92,6 +92,13 @@ if (html.indexOf('data-track="whatsapp"') > html.indexOf('data-track="instagram"
 }
 
 const renderedHtml = html.replace(/<!--[\s\S]*?-->/g, "");
+// Changing the asset version makes embedded browsers request fresh styles/scripts.
+for (const asset of ["styles.css", "script.js", "./intro/intro.css", "./intro/intro.js"]) {
+  const escapedAsset = asset.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!new RegExp(`(?:href|src)="${escapedAsset}\\?v=[a-zA-Z0-9-]+"`).test(renderedHtml)) {
+    throw new Error(`Asset sem versão de cache: ${asset}`);
+  }
+}
 if (renderedHtml.includes("freshness-badge")) throw new Error("O aviso de produção removido não deve reaparecer.");
 if (combined.includes("<<<<<<<") || combined.includes(">>>>>>>")) throw new Error("Conflito de merge não resolvido.");
 if (renderedHtml.includes('id="referral-card"') || renderedHtml.includes('data-track="indicacao"')) {
