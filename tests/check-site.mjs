@@ -113,5 +113,14 @@ if (renderedHtml.includes('class="coming-soon"')) {
   throw new Error("O card Novidade em breve deve permanecer oculto até o lançamento.");
 }
 
+const introCss = await readFile("intro/intro.css", "utf8");
+const videoRule = introCss.match(/\.brand-intro video\s*\{([^}]+)\}/)?.[1] ?? "";
+if (!/object-fit:\s*contain/.test(videoRule) || !/max-width:\s*1280px/.test(videoRule)) {
+  throw new Error("A abertura deve preservar o quadro inteiro e limitar a ampliação.");
+}
+if (!introCss.includes("height: 100dvh") || !introCss.includes("height: 100vh") || !html.includes("viewport-fit=cover")) {
+  throw new Error("A abertura deve acompanhar a altura visível com fallback e áreas seguras.");
+}
+
 console.log("Verificações do link da bio aprovadas.");
 
