@@ -11,29 +11,28 @@
   margin: 0;
   padding: 0;
   border: 0;
-  background: #f1f2f2;
+  background: #fff6f2;
   color: #2e2a31;
   z-index: 2147483647;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(.22,1,.36,1);
 }
 .brand-intro[open] { display: grid; place-items: center; }
-.brand-intro::backdrop { background: #f1f2f2; }
+.brand-intro::backdrop { background: #fff6f2; }
 .brand-intro.is-closing { opacity: 0; }
-/* Preserve the entire 1280 x 720 frame on portrait and landscape screens.
-   Native-size limits avoid unnecessary enlargement on desktop displays. */
 .brand-intro video {
   position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 1280px;
-  max-height: 720px;
+  max-width: 1920px;
+  max-height: 1080px;
   margin: auto;
   object-fit: contain;
   object-position: center;
 }
+.brand-intro[data-format="portrait"] video { max-width: 1080px; max-height: 1920px; }
 .brand-intro-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 112px; height: 112px; object-fit: contain; }
 .brand-intro.is-playing .brand-intro-logo { display: none; }
 .brand-intro-skip {

@@ -17,6 +17,8 @@ const requiredFiles = [
   "intro/intro.js",
   "intro/intro.css",
   "intro/logo-reveal.mp4",
+  "intro/logo-mobile-20260926.mp4",
+  "intro/logo-desktop-20260926.mp4",
   "intro/logo.webp",
 ];
 
@@ -115,7 +117,7 @@ if (renderedHtml.includes('class="coming-soon"')) {
 
 const introCss = await readFile("intro/intro.css", "utf8");
 const videoRule = introCss.match(/\.brand-intro video\s*\{([^}]+)\}/)?.[1] ?? "";
-if (!/object-fit:\s*contain/.test(videoRule) || !/max-width:\s*1280px/.test(videoRule)) {
+if (!/object-fit:\s*contain/.test(videoRule) || !/max-width:\s*1920px/.test(videoRule)) {
   throw new Error("A abertura deve preservar o quadro inteiro e limitar a ampliação.");
 }
 if (!introCss.includes("height: 100dvh") || !introCss.includes("height: 100vh") || !html.includes("viewport-fit=cover")) {
